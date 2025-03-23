@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Covid-19 Detection</h1>
+        <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="xray_image">Upload X-ray Image:</label>
+                <input type="file" name="xray_image" id="xray_image" required>
+            </div>
+            <div class="form-group">
+                <label for="ct_image">Upload CT Scan Image:</label>
+                <input type="file" name="ct_image" id="ct_image" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+
+    
+   
+   
