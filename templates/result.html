@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">  
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Results</h1>
+
+        <div class="result-section">
+            <h2>X-ray Image Classification</h2>
+            <p><strong>Classification:</strong> {{ xray_classification }}</p>
+            <p><strong>Prediction Probability:</strong> {{ xray_prediction }}</p>
+            {% if xray_image_url %}
+                <img src="{{ xray_image_url }}" alt="X-ray Image">
+            {% endif %}
+        </div>
+
+        <div class="result-section">
+            <h2>CT Scan Image Classification</h2>
+            <p><strong>Classification:</strong> {{ ct_classification }}</p>
+            <p><strong>Prediction Probability:</strong> {{ ct_prediction }}</p>
+            {% if ct_image_url %}
+                <img src="{{ ct_image_url }}" alt="CT Scan Image">
+            {% endif %}
+        </div>
+
+        <div class="result-section">
+            <h3>Comparison</h3>
+            <p>{{ comparison }}</p>
+        </div>
+
+        <a href="{{ url_for('index') }}">Go back</a>
+    </div>
+</body>
+</html>
+
+   
