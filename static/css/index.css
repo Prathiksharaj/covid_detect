@@ -1,0 +1,219 @@
+/* Reset some default styles */
+body, h1, form, input, label, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('/static/IMAGESS/COVID19_share.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+button {
+    background-color: rgb(242, 146, 162); /* Pink background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for background and transform */
+}
+
+button:hover {
+    background-color: #ff66b2; /* Darker pink on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+button:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+}
+
+
+/* Styling for the header */
+h1 {
+    background: rgba(255, 192, 203, 0.8);
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+p,h1 { 
+    /* Light pink with some transparency */
+    border-radius: 8px;
+    padding: 10px;
+    margin: 15px auto;
+    max-width: 100%;
+}
+
+.result-section img {
+    border: 5px solid white; /* White border with 5px width */
+    border-radius: 10px; /* Optional: rounded corners for the image */
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto; /* Maintains the aspect ratio */
+    margin-top: 10px; /* Adds some space above the image */
+}
+
+/* Styling for h2 */
+h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for h3 */
+h3 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for p */
+p {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 15px 0;
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Form container styling */
+form {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Form element styling */
+label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #333;
+}
+
+/* Input fields styling */
+input[type="file"] {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #f8a5c2;
+    border-radius: 8px;
+    background-color: #fbeefc;
+    font-size: 16px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="file"]:hover {
+    border-color: #ff3f8c;
+    background-color: #fceaff;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    background-color: #ff3f8c;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+input[type="submit"]:hover {
+    background-color: #d12b6f;
+    transform: scale(1.05);
+}
+
+/* Adding responsiveness */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+        width: 90%;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+    }
+}
+
+a {
+    display: inline-block;
+    color: #ff3f8c;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    margin-top: 20px;
+    border: 2px solid #ff3f8c;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    background-color: #ff3f8c;
+    color: #fff;
+    transform: scale(1.05);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    a {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
